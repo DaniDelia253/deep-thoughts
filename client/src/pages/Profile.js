@@ -22,10 +22,8 @@ const Profile = (props) => {
 
   const [addFriend] = useMutation(ADD_FRIEND);
 
-
-  // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/profile" />;
+    return <Redirect to="/profile" />
   }
 
   if (loading) {
